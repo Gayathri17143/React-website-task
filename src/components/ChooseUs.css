@@ -1,0 +1,13 @@
+.head {
+  font-size: 30px;
+  color: #fff!important;
+  text-align: left;
+}
+.para {
+  font-size: 15px;
+  color: #fff!important;
+  text-align: left;
+}
+.pad {
+    padding: 3%;
+}

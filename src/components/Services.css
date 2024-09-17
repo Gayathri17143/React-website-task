@@ -1,0 +1,16 @@
+.main-head {
+  text-align: center;
+  font-size: 30px;
+  padding: 30px;
+}
+.sub-head {
+  text-align: center;
+  font-size: 16px;
+}
+ .clr{
+    padding: 20px;
+    color: #000;
+    background: #b9fd50;
+    border-radius: 10px;
+    
+ }
