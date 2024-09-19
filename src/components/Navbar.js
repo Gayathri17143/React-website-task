@@ -1,9 +1,8 @@
- 
 import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
- 
+
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
@@ -11,7 +10,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
- 
+
 import Banner from "../assets/logo.png";
 
 const pages = [
@@ -23,27 +22,27 @@ const pages = [
 ];
 
 function ResponsiveAppBar() {
-  
-
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-   
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
 
-  
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-  
- 
 
   return (
-    <AppBar position="static" sx={{ background: "#111204"  }}>
+    <AppBar position="static" sx={{ background: "#111204" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
           <a href="/">
-            <img className="d-block" src={Banner} alt="First slide" width={'100%'} />
+            <img
+              className="d-block"
+              src={Banner}
+              alt="First slide"
+              width={"100%"}
+            />
           </a>
 
           <Box
@@ -51,6 +50,7 @@ function ResponsiveAppBar() {
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
               marginLeft: "3%",
+              justifyContent: "end",
             }}
           >
             {pages.map((page) => (
@@ -59,36 +59,47 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
-                  color: "#fff",
+                  color: "#ccc",
                   display: "block",
                   fontWeight: "600",
-                  textTransform:"none",
-                  fontSize:"16px",
-                  margin:"10px"
+                  textTransform: "none",
+                  fontSize: "16px",
+                  margin: "10px",
                 }}
               >
                 {page.name}
               </Button>
             ))}
+            <Button
+              variant="contained"
+              className="d-view"
+              sx={{
+                display: { xs: "none", md: "block" },
+                color: "#000",
+                textTransform: "none",
+                fontSize: "16px",
+                margin: "10px",
+                background: "#b9fd50",
+              }}
+            >
+              Get Started
+            </Button>
           </Box>
 
-          <Button
-            variant="contained"
-            className="d-view"
-            color="success"
-            sx={{ display: { xs: "none", md: "block" } ,color:"#000",textTransform:"none",fontSize:"16px"}} // Hide on mobile (xs), show on larger screens (md and up)
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              justifyContent: "flex-end",
+            }}
           >
-            Get Started
-          </Button>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              sx={{ color: "#b9fd50" }}
             >
               <MenuIcon />
             </IconButton>
@@ -107,7 +118,7 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: "block", md: "none"  },
               }}
             >
               {pages.map((page) => (

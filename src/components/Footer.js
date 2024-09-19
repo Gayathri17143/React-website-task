@@ -1,131 +1,159 @@
 import React from "react";
-
-import "./Footer.css";
-import { Container } from "@mui/material";
+import { Container, Button } from "@mui/material";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import logo from "../assets/logo.png";
+import "./Footer.css";
+
 const Footer = () => {
   return (
-    <>
-      {/* <Container> */}
+    <footer>
+      <section className="footer-top">
+        <Container>
+          <div className="footer-top-content">
+            <div className="footer-top-text">
+              <h3 className="main-heading">
+                "Stand out online and make
+                <br />
+                an impact"
+              </h3>
+              <p className="paragraph">David Smith - CEO of a Tech Startup</p>
+              <p className="paragraph1">
+                Jump on a membership and start requesting designs right away!
+              </p>
+              <Button
+                variant="contained"
+                color="success"
+                sx={{
+                  fontSize: { xs: "1rem", md: "1rem" },
+                  padding: "10px",
+                  fontWeight: "600",
+                  background: "#b9fd50",
+                  color: "#000",
+                  textTransform: "none",
+                  borderRadius: "10px",
+                }}
+              >
+                See Pricing <ArrowCircleRightIcon />
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
 
-      <div className="foot-container pad">
-        <div className="foot-item">
-          <img src={logo} alt="logo" style={{ marginTop: "20px" }}></img>
-          <div className="foot-text1">
-            TechConnect Internet Private Limited, Buildings Alyssa, Outer Ring
-            Road, Devarabeesanahalli Village, Bengaluru, 560103,
-            Karnataka, India
+      <section className="footer-bottom">
+        <div className="foot-container">
+          <div className="foot-item">
+            <img src={logo} alt="logo" className="logo" />
+            <div className="foot-text1">
+              Click It - is a leading digital marketing agency dedicated to
+              driving success for businesses online. With expertise in SEO,
+              PPC, social media, content creation, and more, we offer tailored
+              solutions to maximize ROI. In the USA, UK, Canada working with
+              top-tier clients, from start-ups to enterprises.
+            </div>
+          </div>
+
+          <div className="foot-item">
+            <h3 className="footer-heading">Our Services</h3>
+            <ul className="menu">
+              <li>
+                <a href="/about" className="foot-text1">
+                  SEO Marketing
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="foot-text1">
+                  Research Topic Trends
+                </a>
+              </li>
+              <li>
+                <a href="/privacypolicy" className="foot-text1">
+                  Email Marketing
+                </a>
+              </li>
+              <li>
+                <a href="/privacypolicy" className="foot-text1">
+                  Google PPC
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="foot-item">
+            <h3 className="footer-heading">Our Location</h3>
+            <ul className="menu">
+              <li>
+                <a href="/about" className="foot-text1">
+                  USA
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="foot-text1">
+                  UK
+                </a>
+              </li>
+              <li>
+                <a href="/privacypolicy" className="foot-text1">
+                  Canada
+                </a>
+              </li>
+              <li>
+                <a href="/privacypolicy" className="foot-text1">
+                  Virtual
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="foot-item">
+            <h3 className="footer-heading">Contact Us</h3>
+            <ul className="menu">
+              <li>
+                <div className="foot-text1">info@Kronix.com</div>
+                <div className="foot-text1">(001)1231 3435</div>
+              </li>
+            </ul>
+            <ul className="icons">
+              <li>
+                <i className="fa-brands fa-facebook"></i>
+              </li>
+              <li>
+                <i className="fa-brands fa-instagram"></i>
+              </li>
+              <li>
+                <i className="fa-brands fa-linkedin"></i>
+              </li>
+              <li>
+                <i className="fa-brands fa-dribbble"></i>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="foot-item">
-          <ul className="menu">
-            <h3 style={{ color: "green" }}>fryerhg</h3>
-            <li>
-              <a href="/about">
-                <i class="fa-regular  ">
-                  <div className="foot-text1">About Us</div>
-                </i>
-              </a>
-              <a href="/contact">
-                <i class="fa-regular  ">
-                  <div className="foot-text1">Contact Us</div>
-                </i>
-              </a>
 
-              <a href="/privacypolicy">
-                <i class="fa-regular  ">
-                  <div className="foot-text1">Privacy Policy</div>
-                </i>
-              </a>
-              <a href="/privacypolicy">
-                <i class="fa-regular  ">
-                  <div className="foot-text1">Privacy Policy</div>
-                </i>
-              </a>
+        <div className="footer-bottom-bar">
+          <ul className="menus">
+            <li>
+              <a href="/" className="foot-text1">Process</a>
+            </li>
+            <li>
+              <a href="/" className="foot-text1">Benefits</a>
+            </li>
+            <li>
+              <a href="/" className="foot-text1">Services</a>
+            </li>
+            <li>
+              <a href="/" className="foot-text1">Portfolio</a>
+            </li>
+            <li>
+              <a href="/" className="foot-text1">FAQ</a>
             </li>
           </ul>
+          <div className="footer-bottom-text">
+            © 2024 RajaramanR3 - All Rights Reserved
+          </div>
         </div>
-        <div className="foot-item">
-          <ul className="menu">
-            <h3 style={{ color: "green" }}>fryerhg</h3>
-            <li>
-              <a href="/about">
-                <i class="fa-regular  ">
-                  <div className="foot-text1">About Us</div>
-                </i>
-              </a>
-              <a href="/contact">
-                <i class="fa-regular  ">
-                  <div className="foot-text1">Contact Us</div>
-                </i>
-              </a>
-
-              <a href="/privacypolicy">
-                <i class="fa-regular  ">
-                  <div className="foot-text1">Privacy Policy</div>
-                </i>
-              </a>
-              <a href="/privacypolicy">
-                <i class="fa-regular  ">
-                  <div className="foot-text1">Privacy Policy</div>
-                </i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="foot-item">
-        <ul className="menu">
-          <li>
-            <a>
-              <i class="fa-regular fa-phone">
-                <div className="foot-text">+123 488 9652</div>
-              </i>
-               
-              <i class="fa-regular fa-envelope">
-                <div className="foot-text">info@techconnect.com</div>
-              </i>
-             
-            </a>
-          </li>
-        </ul>
-        <ul className="icons">
-          <li>
-            
-              <a>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-youtube"></i>
-              </a>
-             
-          </li>
-        </ul>
-        </div>
-      </div>
-      <div className="dis-flx bor-top">
-      <ul className="menu">
-          <li>
-            <a className="foot">
-              
-                <div className="foot-text">About Us</div>
-              
-                <div className="foot-text">Our Team</div>
-              
-                <div className="foot-text">Maintance Mode</div>
-               
-                <div className="foot-text">Privacy Policy</div>
-               
-            </a>
-          </li>
-        </ul>
-
-        
-        <div className=" ">
-          © 2023 TechConnect Theme. All Rights Reserved.
-        </div>
-      </div>
-      {/* </Container> */}
-    </>
+      </section>
+    </footer>
   );
 };
 
